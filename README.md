@@ -1,7 +1,5 @@
 # SAV to CSV Converter
 
-![SPSS Logo](https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/IBM_SPSS_Statistics_logo.svg/200px-IBM_SPSS_Statistics_logo.svg.png)
-
 This Python tool allows you to effortlessly convert SPSS SAV files to CSV format using the `pyreadstat` library.
 
 ## Installation

@@ -1,39 +1,44 @@
 # SAV to CSV Converter
 
-This Python tool allows you to effortlessly convert SPSS SAV files to CSV format using the `pyreadstat` library.
-
-## Installation
-
-Before using the SAV to CSV Converter, ensure you have Python installed on your system. You can download Python from [python.org](https://www.python.org/downloads/).
-
-To install the required libraries, simply use `pip`:
-
-```bash
-pip install pyreadstat
-```
+Convert SPSS SAV files to CSV effortlessly using Python and the `pyreadstat` library.
 
 ## Usage
 
-1. Download the `sav_to_csv_converter.py` script from this repository.
+1. **Download the Script**: Get the `sav_to_csv_converter.py` script from this repository.
 
-2. Place your SPSS SAV file (e.g., `input.sav`) in the same directory as the script.
+2. **Place Your SAV File**: Put your SPSS SAV file (e.g., `input.sav`) in the same directory as the script.
 
-3. Open a terminal or command prompt and navigate to the directory containing the script and your SAV file.
+3. **Run the Conversion**: Open a terminal or command prompt, navigate to the script's directory, and run:
 
-4. Run the following command:
+   ```bash
+   python sav_to_csv_converter.py input.sav
+   ```
 
-```bash
-python sav_to_csv_converter.py input.sav
-```
+   This will create `input.csv` with your converted data.
 
-This will swiftly convert the SAV file to CSV format and save it as `input.csv` in the same directory.
+## Requirements
 
-## Acknowledgments
+- Python 3.x
+- `pyreadstat` library
 
-This tool relies on the fantastic [pyreadstat](https://github.com/Roche/pyreadstat) library, which provides the capability to read and write data in the SPSS SAV file format.
+## Installation
+
+1. **Install Python**: Download and install Python from [python.org](https://www.python.org/downloads/).
+
+2. **Install Required Library**:
+
+   ```bash
+   pip install pyreadstat
+   ```
+
+3. **Download the Script**: Grab the `sav_to_csv_converter.py` script from this repository.
+
+4. **Run the Conversion**: Follow the usage instructions to convert your SAV files to CSV.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Acknowledgments
+
+Thanks to the creators of the `pyreadstat` library for making SPSS SAV to CSV conversion simple.

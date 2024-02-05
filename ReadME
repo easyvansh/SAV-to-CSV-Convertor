@@ -1,0 +1,62 @@
+# SAV to CSV Converter
+
+This small Python tool allows you to convert SPSS SAV files to CSV format using the `pyreadstat` library.
+
+## Installation
+
+Before using the SAV to CSV Converter, make sure you have Python installed on your system. You can download Python from [python.org](https://www.python.org/downloads/).
+
+To install the required libraries, you can use `pip`:
+
+```bash
+pip install pyreadstat
+```
+
+## Usage
+
+1. Download the `sav_to_csv_converter.py` script from this repository.
+
+2. Place your SPSS SAV file (e.g., `input.sav`) in the same directory as the script.
+
+3. Open a terminal or command prompt and navigate to the directory containing the script and your SAV file.
+
+4. Run the following command:
+
+```bash
+python sav_to_csv_converter.py input.sav
+```
+
+This will convert the SAV file to CSV and save it as `input.csv` in the same directory.
+
+## Example
+
+Here's an example Python script (`sav_to_csv_converter.py`) that uses `pyreadstat` to convert an SAV file to CSV:
+
+```python
+import pyreadstat
+
+def convert_sav_to_csv(input_file):
+    try:
+        df, meta = pyreadstat.read_sav(input_file)
+        output_file = input_file.replace('.sav', '.csv')
+        df.to_csv(output_file, index=False)
+        print(f"Conversion successful. CSV file saved as '{output_file}'")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python sav_to_csv_converter.py input.sav")
+    else:
+        input_file = sys.argv[1]
+        convert_sav_to_csv(input_file)
+```
+
+## Acknowledgments
+
+- [pyreadstat](https://github.com/Roche/pyreadstat): A Python library for reading and writing data in the SPSS SAV file format.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
